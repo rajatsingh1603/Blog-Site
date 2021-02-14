@@ -1,0 +1,14 @@
+
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p><%= startingcontent%></p>
+<% console.log(addon) %>
+
+<% addon.forEach(function(addon){ %>
+   <h1><%= addon.title %></h1>
+   <p><%= addon.content.substring(0,100) + "..." %> <a href="/posts/<%= addon.title%>">Read more</a></p>
+<% }) %>
+
+<%- include("partials/footer") -%>
+
+
